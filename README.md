@@ -18,11 +18,11 @@ or only:
 
 If you want to ignore some parts, juste remove it, keeping all the `_`, such as:
 
-   Type__lifecyclestate_dc:valid_dc:creator_filename.doc
+    Type__lifecyclestate_dc:valid_dc:creator_filename.doc
 
 With this one, the `dc:source` will be kept empty.
 
-  Type____dc:creator_filename.doc
+    Type____dc:creator_filename.doc
 
 With this one, only the `dc:creator` property will be field.
 
