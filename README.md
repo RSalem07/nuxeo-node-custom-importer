@@ -2,7 +2,7 @@
 
 This is a fork of [nuxeo-node-importer](https://github.com/troger/nuxeo-node-importer) to show how to customize it to import a custom hierarchy.
 
-We will create documents on the Nuxeo Platform instance according to the filenames of the hierarchy.
+This importer creates documents on the Nuxeo Platform instance according to the filenames of the hierarchy.
 
 Full filename format is:
 
@@ -29,9 +29,9 @@ With this one, only the `dc:creator` property will be field.
 
 Here are some rules the importer will follow:
 
-- If the `Type` is `Note`, instead of uploading the file, we will set the `note:note` field.
-- if no `Type` are specified for a directory, we will create a `Folder`.
-- if no `Type` are specified for a file, we will create a `File`.
+- If the `Type` is `Note`, instead of uploading the file, the property `note:note` will be filled with the file content.
+- if no `Type` are specified for a directory, it defaults to `Folder`.
+- if no `Type` are specified for a file, it defaults to `File`.
 
 
 ## Installation
