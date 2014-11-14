@@ -42,16 +42,17 @@ This module is not yet published on npm.
 
 ## Usage
 
-    $ nuxeo-importer [options] local-path remote-path
+    $ nuxeo-custom-importer [options] local-path remote-path
 
 Recursively import the files and directories of `local-path` to the `remote-path` on a Nuxeo Platform instance.
 
 Options are:
 
-- `--baseURL`: the base URL of the Nuxeo Platform instance
-- `--username`: the username to use to connect to the server
-- `--password`: the password to use to connect to the server
-- `--verbose`: verbose output
+- `-b, --baseURL`: the base URL of the Nuxeo Platform instance
+- `-u, --username`: the username to use to connect to the server
+- `-p, --password`: the password to use to connect to the server
+- `-m, --maxConcurrentRequests`: Maximum number of concurrent requests. Default to 5.
+- `-v, --verbose`: verbose output
 
 ## Sample
 
@@ -59,4 +60,4 @@ A sample directory / file structure can be found in the `sample_files` folder.
 
 To import it in a Nuxeo Platform instance running on `localhost` (in an existing `ws` Workspace):
 
-    $ nuxeo-importer sample_files /default-domain/workspaces/ws
+    $ nuxeo-custom-importer sample_files /default-domain/workspaces/ws
