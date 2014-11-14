@@ -61,3 +61,11 @@ A sample directory / file structure can be found in the `sample_files` folder.
 To import it in a Nuxeo Platform instance running on `localhost` (in an existing `ws` Workspace):
 
     $ nuxeo-custom-importer sample_files /default-domain/workspaces/ws
+    
+## Extend the importer
+
+The main work is done in the `async.waterfall` call, that takes an array of functions (`funcs`), such as `setACE` and `followTransition`, to execute in the given order for each file to process. Each function, when done, passes arguments to the next one.
+
+See https://github.com/caolan/async#waterfall to understand how it works and what will be passed to the next function (basically, calling `callback(...)` will tell to `async` to call the next function).
+
+If you want to implement custom behaviour when importing documents, you need to add such functions and add them to the `funcs` array.
