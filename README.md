@@ -52,6 +52,7 @@ Options are:
 - `-u, --username`: the username to use to connect to the server
 - `-p, --password`: the password to use to connect to the server
 - `-m, --maxConcurrentRequests`: Maximum number of concurrent requests. Default to 5.
+- `-t, --timeout`: Timeout in ms. Default to 30000.
 - `-v, --verbose`: verbose output
 
 ## Sample

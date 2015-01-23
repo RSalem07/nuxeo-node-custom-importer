@@ -12,6 +12,7 @@ program
   .option('-u, --username [username]', 'Username', 'Administrator')
   .option('-p, --password [password]', 'Password', 'Administrator')
   .option('-m, --maxConcurrentRequests [max]', 'Maximum number of concurrent requests', 5)
+  .option('-t, --timeout [timeout]', 'Timeout in ms. Used for the requests and also for the Transaction on Nuxeo side', 30000)
   .option('-v, --verbose', 'Verbose output', false);
 
 program.parse(process.argv);
@@ -27,6 +28,7 @@ if (program.verbose) {
   console.log('  username: ' + program.username);
   console.log('  password: ' + program.password);
   console.log('  maxConcurrentRequests: ' + program.maxConcurrentRequests);
+  console.log('  timeout: ' + program.timeout);
   console.log('  localPath: ' + program.args[0]);
   console.log('  remotePath: ' + program.args[1]);
   console.log('');
@@ -39,5 +41,6 @@ importer.import({
   maxConcurrentRequests: program.maxConcurrentRequests,
   localPath: program.args[0],
   remotePath: program.args[1],
+  timeout: program.timeout,
   verbose: program.verbose
 });
