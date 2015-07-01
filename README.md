@@ -36,7 +36,7 @@ Here are some rules the importer will follow:
 
 ## Installation
 
-    $ npm install -g troger/nuxeo-node-custom-importer
+    $ npm install -g nuxeo-sandbox/nuxeo-node-custom-importer
 
 This module is not yet published on npm.
 
